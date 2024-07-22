@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 module "app-service" {
-    source = "../modules/webapp"
+    source = "./modules/webapp"
     app_service_name = "${var.environment}-main-app-service"
     app_service_plan_name = "app_service_plan"
     resource_group_name = "rg"
