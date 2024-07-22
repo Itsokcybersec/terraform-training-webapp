@@ -10,7 +10,7 @@ variable "app_service_name" {
 variable "resource_group_name" {
     type      = string
     description = "RG name in Azure"
-    default = "resource-group-name"
+    default = "rg"
 }
 variable "resource_group_location" {
     type      = string
@@ -26,3 +26,7 @@ variable "app_service_plan" {
 }
 
 #Calling variable value from /dev/variables
+
+variable webapp_url" {
+}
+

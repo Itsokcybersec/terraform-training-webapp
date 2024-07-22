@@ -38,7 +38,7 @@ variable "department" {
 variable "resource_group_name" {
   type = string
   description = "Resource Group Name"
-  default = "ResourceGroupName"
+  default = "rg"
 }
 
 variable "company_division" {
