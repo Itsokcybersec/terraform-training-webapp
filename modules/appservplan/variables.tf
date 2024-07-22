@@ -19,5 +19,10 @@ variable "app_service_plan" {
         size = "F1"
     }
 }
+variable "location" {
+    type = string
+    description = "Azure Location"
+    default = "Canada Central"
+}
 
 #Calling variable value from /dev/variables
