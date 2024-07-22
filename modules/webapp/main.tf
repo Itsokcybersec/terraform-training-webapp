@@ -1,7 +1,7 @@
 resource "azurerm_service_plan" "webapp_service_plan" {
   name                = var.app_service_plan_name
-  location            = azurerm_resource_group."${var.environment}-rg".location
-  resource_group_name = azurerm_resource_group."${var.environment}-rg".name  
+  location            = azurerm_resource_group.git-poc-rg".location
+  resource_group_name = azurerm_resource_group.git-poc-rg".name  
   
   sku {
       tier = var.app_service_plan.tier

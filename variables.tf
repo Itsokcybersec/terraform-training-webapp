@@ -2,7 +2,7 @@
 variable "environment" {
   type = string
   description = "Environment Name"
-  default = "lab"
+  default = "git-poc"
 }
 
 variable "location" {
