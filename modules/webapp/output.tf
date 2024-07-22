@@ -8,5 +8,5 @@ output "webapp_url" {
 }
 
 output "webapp_ips" {
-    value = azurerm_service.app_service.outbound_ip_addresses
+    value = azurerm_app_service.app_service.outbound_ip_addresses
 }
