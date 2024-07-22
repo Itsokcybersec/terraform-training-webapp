@@ -14,18 +14,16 @@ module "app_service1" {
 
 module "storage_account1" {
     source = "./modules/sa"
-    app_service_name = "cig-tf-poc-sa-1"
-    app_service_plan_name = "app_service_plan"
-    resource_group_name = azurerm_resource_group.rg.name
-    resource_group_location = azurerm_resource_group.rg.location
+    saname = "cig-tf-poc-sa-1"
+    rgname = azurerm_resource_group.rg.name
+    location = azurerm_resource_group.rg.location
 
 }
 
 module "storage_account2" {
     source = "./modules/sa"
-    app_service_name = "cig-tf-poc-sa-2"
-    app_service_plan_name = "app_service_plan"
-    resource_group_name = azurerm_resource_group.rg.name
-    resource_group_location = azurerm_resource_group.rg.location
+    saname = "cig-tf-poc-sa-2"
+    rgname = azurerm_resource_group.rg.name
+    location = azurerm_resource_group.rg.location
 
 }
