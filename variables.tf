@@ -14,7 +14,7 @@ variable "location" {
 variable "build_region" {
   type = string
   description = "Azure Build Region"
-  default = "canada-central" #"canada-east"
+  default = "Canada Central"
 }
 
 variable "owner" {

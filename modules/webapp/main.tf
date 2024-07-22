@@ -1,9 +1,4 @@
-resource "azurerm_resource_group" "rg" {
-  name     = var.resource_group_name
-  location = var.resource_group_location
-}
-
-resource "azurerm_app_service_plan" "app_service_plan" {
+resource "azurerm_service_plan" "webapp_service_plan" {
   name                = var.app_service_plan_name
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -18,7 +13,7 @@ resource "azurerm_app_service_plan" "app_service_plan" {
   name                = var.app_service_name
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  app_service_plan_id = azurerm_app_service_plan.app_service_plan.id
+  app_service_plan_id = azurerm_service_plan.webapp_service_plan.id
 
   site_config {
     dotnet_framework_version = "v4.0"

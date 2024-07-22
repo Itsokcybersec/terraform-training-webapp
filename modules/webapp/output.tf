@@ -4,9 +4,9 @@ output "app_service_output_id" {
 }
 
 output "webapp_url" {
-    value = azurerm_app_service.app_service.default_site_hostname
+    value = azurerm_service.webapp_service.default_site_hostname
 }
 
 output "webapp_ips" {
-    value = azurerm_app_service.app_service.outbound_ip_addresses
+    value = azurerm_service.webapp_service.outbound_ip_addresses
 }
