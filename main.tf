@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg" {
   name     = "${var.environment}-rg"
-  location = var.location
+  location = var.build_region
 }
 
 module "app-service" {
