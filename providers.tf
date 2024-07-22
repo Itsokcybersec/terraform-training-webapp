@@ -13,7 +13,7 @@ terraform {
 #    hostname = "app.terraform.io"
 
     workspaces {   
-      name = "terraform-training"
+      name = "terraform-training-webapp"
     }
   }
 }
