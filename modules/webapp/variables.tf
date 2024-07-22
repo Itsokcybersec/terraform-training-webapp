@@ -26,7 +26,3 @@ variable "app_service_plan" {
 }
 
 #Calling variable value from /dev/variables
-
-variable "webapp_url" {
-}
-
