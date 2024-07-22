@@ -1,3 +1,11 @@
-variable "location" {}
+variable "environment" {
+  type = string
+  description = "Environment Name"
+  default = "git-poc"
+}
 
-variable "environment" {}
+variable "location" {
+  type = string
+  description = "Azure Location"
+  default = "Canada Central"
+}
