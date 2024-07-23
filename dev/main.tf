@@ -1,11 +1,12 @@
-resource "azurerm_resource_group" "rg" {
-  name     = "${var.environment}-rg"
-  location = var.location
-}
-
 resource "random_integer" "ri" {
   min = 10000
   max = 99999
+}
+
+module "cig_tf_poc_rg" {
+  source = "../modules/rg"  
+  name     = "${var.environment}-rg"
+  location = var.location
 }
 
 module "app_service_plan1" {
