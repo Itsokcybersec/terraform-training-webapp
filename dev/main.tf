@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 module "storage_account1" {
-    source = "./modules/sa"
+    source = "../modules/sa"
     saname = "cigtfpocsa1"
     resource_group_name = azurerm_resource_group.rg.name
     resource_group_location = azurerm_resource_group.rg.location
@@ -12,7 +12,7 @@ module "storage_account1" {
 }
 
 module "storage_account2" {
-    source = "./modules/sa"
+    source = "../modules/sa"
     saname = "cigtfpocsa2"
     resource_group_name = azurerm_resource_group.rg.name
     resource_group_location = azurerm_resource_group.rg.location
