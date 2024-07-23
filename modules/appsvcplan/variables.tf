@@ -27,3 +27,8 @@ variable "sku_name" {
     description = "App Service Plan OS SKU Name"
     default = "P1v2"
 }
+variable "resource_group_azure_name" {
+    type      = string
+    description = "RG name in Azure"
+    default = "git-poc-rg"
+}
