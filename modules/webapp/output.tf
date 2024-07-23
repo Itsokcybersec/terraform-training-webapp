@@ -1,6 +1,6 @@
 output "app_service_output_id" {
     value = "${azurerm_app_service.app_service.id}"
-    #value = "${module.webapp.app_service_output_id.id}"
+    #value = "${webapp.app_service_output_id.id}"
 }
 
 output "webapp_ips" {
