@@ -16,8 +16,8 @@ variable "app_service_plan" {
     type      = map
     description = "App Service Tier and SKU"
     default = {
-        tier = "Free"
-        size = "F1"
+        os_type = "Windows"
+        sku_name = "P1v2"
     }
 }
 variable "location" {
