@@ -1,5 +1,5 @@
 output "resource_group_id" {
-  value = azurerm_resource_group.rg.id
+  value = module.cig_tf_poc_rg.id
 }
 
 output "resource_group_name" {

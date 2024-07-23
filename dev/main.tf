@@ -5,7 +5,7 @@ resource "random_integer" "ri" {
 
 module "cig_tf_poc_rg" {
   source = "../modules/rg"  
-  name     = "${var.environment}-rg"
+#  name     = "${var.environment}-rg"
   location = var.location
 }
 
