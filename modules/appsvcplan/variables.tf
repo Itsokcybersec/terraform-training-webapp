@@ -10,6 +10,7 @@ variable "resource_group_name" {
 variable "resource_group_location" {
     type      = string
     description = "RG location in Azure"
+    default = "Canada Central"
 }
 variable "app_service_plan" {
     type      = map
