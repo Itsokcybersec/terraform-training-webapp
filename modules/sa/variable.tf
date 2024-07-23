@@ -13,7 +13,7 @@ variable "resource_group_location" {
 variable "environment" {
   type = string
   description = "Environment Name"
-  default = "git-poc"
+  default = "cig-poc"
 }
 
 variable "location" {
