@@ -8,12 +8,6 @@ resource "random_integer" "ri" {
   max = 99999
 }
 
-module "cig_tf_poc_rg" {
-  source = "../modules/rg"  
-#  name     = "${var.environment}-rg"
-  location = var.location
-}
-
 module "app_service_plan1" {
     source = "../modules/appsvcplan"
     app_service_plan_name = "cig-tf-poc-app-svc-plan-${random_integer.ri.result}"
