@@ -8,12 +8,6 @@ variable "environment" {
 variable "location" {
   type = string
   description = "Azure Location"
-  default = "canadaeast"
-}
-
-variable "build_region" {
-  type = string
-  description = "Azure Build Region"
   default = "Canada Central"
 }
 

@@ -1,13 +1,31 @@
 resource "azurerm_resource_group" "rg" {
   name     = "${var.environment}-rg"
-  location = var.build_region
+  location = var.location
 }
 
-module "app-service" {
+module "app_service1" {
     source = "./modules/webapp"
-    app_service_name = module.webapp.name
+    app_service_name = "cig-tf-poc-web-app-1"
     app_service_plan_name = "app_service_plan"
-    resource_group_name = "rg"
-    resource_group_location = "Canada Central"
+    resource_group_name = azurerm_resource_group.rg.name
+    resource_group_location = azurerm_resource_group.rg.location
+
+}
+
+module "storage_account1" {
+    source = "./modules/sa"
+    app_service_name = "cig-tf-poc-sa-1"
+    app_service_plan_name = "app_service_plan"
+    resource_group_name = azurerm_resource_group.rg.name
+    resource_group_location = azurerm_resource_group.rg.location
+
+}
+
+module "storage_account2" {
+    source = "./modules/sa"
+    app_service_name = "cig-tf-poc-sa-2"
+    app_service_plan_name = "app_service_plan"
+    resource_group_name = azurerm_resource_group.rg.name
+    resource_group_location = azurerm_resource_group.rg.location
 
 }
