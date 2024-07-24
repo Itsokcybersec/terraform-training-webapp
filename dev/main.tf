@@ -4,8 +4,8 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "random_integer" "ri" {
-  min = 10000
-  max = 99999
+  min = 10000000
+  max = 99999999
 }
 
 module "app_service_plan1" {
@@ -18,7 +18,7 @@ module "app_service_plan1" {
 
 module "storage_account1" {
     source = "../modules/sa"
-    saname = "cigtfpocsa${random_integer.ri.result}"
+    saname = "cigtfpocsvcacct${random_integer.ri.result}"
     resource_group_name = azurerm_resource_group.rg.name
     resource_group_location = azurerm_resource_group.rg.location
 
@@ -26,7 +26,7 @@ module "storage_account1" {
 
 module "storage_account2" {
     source = "../modules/sa"
-    saname = "cigtfpocsa${random_integer.ri.result}"
+    saname = "cigtfpocsvcacct${random_integer.ri.result}"
     resource_group_name = azurerm_resource_group.rg.name
     resource_group_location = azurerm_resource_group.rg.location
 
